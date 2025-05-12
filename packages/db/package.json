@@ -1,0 +1,23 @@
+{
+  "name": "@repo/db",
+  "version": "0.0.1",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "init": "node ./scripts/init-local-db.js",
+    "init-local": "node ./scripts/init-local-db.js",
+    "db:init": "node ./scripts/init-local-db.js",
+    "db:migrate": "node ./scripts/migrate.js",
+    "db:seed": "node ./scripts/seed.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "drizzle-kit": "^0.31.1",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.43.1"
+  }
+}

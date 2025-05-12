@@ -20,7 +20,15 @@ This project aims to provide a free email solution that respects user privacy an
 
 ```bash
 npm install
+
+npx wrangler d1 create email_storage
 ```
+
+![alt text](image.png)
+
+### Router Setup
+
+Populate the wrangle.toml file with the credentials from the create d1 command
 
 ### Local Development
 

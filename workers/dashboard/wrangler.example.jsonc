@@ -8,7 +8,7 @@
     {
       "binding": "DB",
       "database_name": "email_storage",
-      "database_id": "aef81193-01bd-43d9-bc43-19a4fdadc7f7"
+      "database_id": "<unique-ID-for-your-database>"
     }
   ]
 }

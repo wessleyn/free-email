@@ -1,13 +1,16 @@
 {
-  "name": "temp",
+  "name": "@repo",
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "start": "turbo run start",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
+    "init-db": "turbo db:init",
+    "router:init": "turbo db:init -- router",
+    "dash:init": "turbo db:init -- dashboard",
+    "check-types": "turbo run check-types",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "prettier": "^3.5.3",

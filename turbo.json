@@ -3,29 +3,52 @@
   "ui": "tui",
   "tasks": {
     "pre-build": {
-      "dependsOn": ["^pre-build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "dependsOn": [
+        "^pre-build"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**"
+      ]
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": [
+        "^lint"
+      ]
     },
     "check-types": {
-      "dependsOn": ["^check-types"]
+      "dependsOn": [
+        "^check-types"
+      ]
     },
     "deploy": {
       "cache": true,
-      "dependsOn": ["pre-build"],
+      "dependsOn": [
+        "pre-build"
+      ],
       "persistent": true
     },
     "start": {
       "cache": true,
-      "dependsOn": ["pre-build"],
+      "dependsOn": [
+          "^db:init",
+        "pre-build"
+      ],
       "persistent": true
     },
     "dev": {
+      "dependsOn": [
+        "^db:init"
+      ],
       "cache": false,
       "persistent": true
+    },
+    "db:init": {
+      "cache": false
     }
   }
 }
