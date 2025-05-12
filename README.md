@@ -9,6 +9,37 @@ This project aims to provide a free email solution that respects user privacy an
 - **Email Router**: A worker that routes emails to a database on the server
 - **Pages Worker**: An interface to display and reply to received emails
 
+## How to Run
+
+### Prerequisites
+
+- Node.js (v18 or later)
+- npm (v8 or later)
+
+### Installation
+
+```bash
+npm install
+```
+
+### Local Development
+
+```bash
+turbo dev
+```
+
+### Pre-Production
+
+```bash
+turbo start
+```
+
+## Production Deployment
+
+```bash
+turbo deploy
+```
+
 ## Features (Planned)
 
 - Email sending and receiving
@@ -17,10 +48,6 @@ This project aims to provide a free email solution that respects user privacy an
 - Custom domains
 - Email forwarding
 - Simple and intuitive interface
-
-## Development
-
-This project is currently in early development.
 
 ## License
 
