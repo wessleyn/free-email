@@ -1,37 +1,84 @@
-# Free Email
+# Turborepo starter
 
-A simple, secure and open-source email service project.
+This Turborepo starter is maintained by the Turborepo core team.
 
-## Overview
+## Using this example
 
-This project aims to provide a free email solution that respects user privacy and data ownership. It is a turborepo with two workers:
+Run the following command:
 
-- **Email Router**: A worker that routes emails to a database on the server
-- **Pages Worker**: An interface to display and reply to received emails
+```sh
+npx create-turbo@latest
+```
 
-## Features (Planned)
+## What's inside?
 
-- Email sending and receiving
-- Inbox management
-- Spam filtering
-- Custom domains
-- Email forwarding
-- Simple and intuitive interface
+This Turborepo includes the following packages/apps:
 
-## Development
+### Apps and Packages
 
-This project is currently in early development.
+- `docs`: a [Next.js](https://nextjs.org/) app
+- `web`: another [Next.js](https://nextjs.org/) app
+- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
+- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
-## License
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
-This project is licensed under the [Apache License 2.0](LICENSE) - see the LICENSE file for details.
+### Utilities
 
-### Why Apache 2.0?
+This Turborepo has some additional tools already setup for you:
 
-The Apache 2.0 License provides several key benefits for this project:
+- [TypeScript](https://www.typescriptlang.org/) for static type checking
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting
 
-- **Explicit Patent Grant**: Contributors grant a perpetual, irrevocable, royalty-free patent license covering their contributions
-- **Patent Retaliation Clause**: Protects the project from patent litigation
-- **Permissive Yet Protective**: Allows for free use, modification, and distribution while maintaining important protections
-- **GPLv3-Compatible**: Compatible with GPL v3 projects
-- **Community & Enterprise Trust**: Widely adopted by both open source communities and enterprises
+### Build
+
+To build all apps and packages, run the following command:
+
+```
+cd my-turborepo
+pnpm build
+```
+
+### Develop
+
+To develop all apps and packages, run the following command:
+
+```
+cd my-turborepo
+pnpm dev
+```
+
+### Remote Caching
+
+> [!TIP]
+> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+
+Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+
+By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+
+```
+cd my-turborepo
+npx turbo login
+```
+
+This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+
+Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+
+```
+npx turbo link
+```
+
+## Useful Links
+
+Learn more about the power of Turborepo:
+
+- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
+- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
+- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
+- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
+- [Configuration Options](https://turborepo.com/docs/reference/configuration)
+- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
