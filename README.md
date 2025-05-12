@@ -39,7 +39,7 @@ turbo start
 ```bash
 turbo deploy
 ```
-
+(see [DEPLOY.md](DEPLOY.md) for more details)
 ## Features (Planned)
 
 - Email sending and receiving
